@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عبد الحميد | Senior Graphic Designer & 3D Visual Artist</title>
+<meta name="description" content="Portfolio of عبد الحميد, specializing in sports branding, 3D character sculpting, and environment design.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050505'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23FF2A2A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050505;
+  --surface:#0f0f0f;
+  --line:#2a2a2a;
+  --line-soft:rgba(42,42,42,.4);
+  --accent:#FF2A2A;
+  --accent-glow:rgba(255,42,42,0.4);
+  --text:#F5F5F5;
+  --muted:#888888;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --col:900px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:400 16px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden;background-image:radial-gradient(circle at 50% 0%, #1a0a0a 0%, transparent 70%)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+::selection{background:var(--accent);color:#fff}
+
+.frame{max-width:var(--col);margin:0 auto;border-inline:1px solid var(--line-soft);min-height:100vh; position:relative;}
+.hatch{height:1px; background:var(--line-soft); margin-inline:calc(50% - 50vw); width:100vw; position:relative;}
+.pad{padding-inline:40px}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;background:rgba(5,5,5,.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line-soft)}
+.bar-in{max-width:var(--col);margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;padding-inline:40px;border-inline:1px solid var(--line-soft)}
+.mark{font:900 28px/1 var(--display);letter-spacing:.04em;text-decoration:none; text-transform:uppercase;}
+.mark i{font-style:normal;color:var(--accent); text-shadow:0 0 10px var(--accent-glow);}
+nav{display:flex;align-items:center;gap:12px}
+nav a{font-size:14px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:4px;transition:all .2s; font-weight:500; text-transform:uppercase; letter-spacing:0.05em;}
+nav a:hover{color:var(--text); background:rgba(255,255,255,0.05);}
+.kbd-btn{display:flex;align-items:center;gap:8px;margin-left:12px;height:34px;padding:0 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--muted);font:500 13px var(--body);cursor:pointer;transition:all .2s}
+.kbd-btn:hover{border-color:var(--accent);color:var(--text); box-shadow:0 0 15px rgba(255,42,42,0.15);}
+kbd{font:600 11px var(--body);padding:2px 6px;border-radius:3px;background:#1a1a1a;border:1px solid var(--line);color:var(--muted)}
+
+/* hero */
+.banner{position:relative;height:240px;overflow:hidden;border-bottom:1px solid var(--line-soft)}
+.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, transparent, var(--bg)); z-index:1;}
+.glitch-bg {position:absolute; inset:-20%; background-image:repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px); opacity:0.5; z-index:0;}
+
+.id{display:flex;gap:32px;align-items:flex-end;margin-top:-80px;position:relative;z-index:2}
+.avatar{flex:none;width:140px;height:140px;border-radius:4px;background:var(--bg);border:1px solid var(--line);padding:6px; box-shadow:0 10px 30px rgba(0,0,0,0.8);}
+.avatar > *{width:100%;height:100%;object-fit:cover;display:grid;place-items:center;background:#111;font:900 52px/1 var(--display);color:var(--text); border:1px solid var(--line-soft);}
+.avatar span i{font-style:normal;color:var(--accent); text-shadow: 0 0 12px var(--accent-glow);}
+h1{font:900 clamp(50px,9vw,90px)/.85 var(--display);text-transform:uppercase;letter-spacing:-.01em; margin-bottom:8px;}
+.role{color:var(--muted);font-size:18px; line-height:1.4;}
+.role b{color:var(--text);font-weight:600; background:linear-gradient(90deg, #fff, #888); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.status{display:inline-flex;align-items:center;gap:12px;margin:32px 0 40px;padding:8px 16px;border:1px solid var(--line);border-radius:4px;font-size:14px;color:var(--muted); font-weight:500;}
+.dot{width:8px;height:8px;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:beat 2s ease-in-out infinite}
+@keyframes beat{0%, 100%{opacity:1; transform:scale(1)} 50%{opacity:0.4; transform:scale(0.8)}}
+
+/* sections */
+.sec-h{padding:24px 40px;border-bottom:1px solid var(--line-soft); background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);}
+h2{font:900 42px/1 var(--display);text-transform:uppercase; letter-spacing:.02em; color:#fff;}
+.sec{padding:40px}
+.about li{list-style:none;position:relative;padding-left:24px;color:#b0b0b0;max-width:70ch; font-size:16px;}
+.about li+li{margin-top:20px}
+.about li::before{content:"";position:absolute;left:0;top:.4em;width:8px;height:8px;background:transparent; border:2px solid var(--accent);}
+.about mark{background:rgba(255,42,42,0.1);color:#fff;font-weight:500;padding:0 4px; border-radius:2px;}
+
+.group+.group{margin-top:40px}
+.group h3{font:700 20px/1 var(--display); text-transform:uppercase; letter-spacing:0.05em; color:var(--text);margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border:1px solid var(--line);border-radius:4px;background:var(--surface);font-size:14px;font-weight:500;transition:all .3s}
+.chip:hover{border-color:var(--accent); background:rgba(255,42,42,0.05); transform:translateY(-2px); box-shadow:0 5px 15px rgba(0,0,0,0.5);}
+.chip svg{width:16px;height:16px;flex:none;color:var(--accent)}
+
+/* work */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.tab{height:38px;padding:0 18px;border-radius:4px;border:1px solid var(--line);background:transparent;color:var(--muted);font:600 14px var(--display); text-transform:uppercase; letter-spacing:0.05em; cursor:pointer;transition:all .2s}
+.tab:hover{color:var(--text); border-color:#555;}
+.tab[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{display:block;text-decoration:none;border:1px solid var(--line);background:var(--surface);transition:all .3s; position:relative; overflow:hidden;}
+.card::before{content:""; position:absolute; inset:0; border:1px solid var(--accent); opacity:0; transition:opacity .3s; pointer-events:none; z-index:10;}
+a.card:hover::before, .card:hover::before{opacity:1;}
+a.card:hover{transform:translateY(-4px); box-shadow:0 15px 30px rgba(0,0,0,0.6);}
+.thumb{aspect-ratio:16/9;position:relative;overflow:hidden;background-color:#0a0a0a;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover; transition:transform 0.5s cubic-bezier(0.2, 0, 0, 1);}
+.card:hover .thumb img{transform:scale(1.05);}
+.num{font:900 80px/1 var(--display);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,0.1); position:absolute; bottom:-15px; right:-5px;}
+.meta{padding:20px}
+.meta h4{font:800 26px/1.1 var(--display);letter-spacing:.02em; text-transform:uppercase;}
+.meta p{font-size:14px;color:var(--muted);margin-top:8px;display:flex;justify-content:space-between;gap:12px; font-weight:500;}
+
+/* experience */
+.xp-item{border-bottom:1px solid var(--line-soft)}
+.xp-btn{width:100%;display:flex;align-items:center;gap:20px;padding:24px 40px;background:none;border:0;color:inherit;font:inherit;text-align:left;cursor:pointer;transition:background .2s}
+.xp-btn:hover{background:rgba(255,255,255,.015)}
+.logo{flex:none;width:48px;height:48px;border:1px solid var(--line);background:#111;display:grid;place-items:center;overflow:hidden;font:900 24px/1 var(--display);color:var(--text)}
+.xp-t{flex:1;min-width:0}
+.xp-t b{display:block;font-weight:600;font-size:17px; color:#fff;}
+.xp-t span{display:block;color:var(--muted);font-size:14px; margin-top:2px;}
+.xp-d{color:var(--accent);font-size:14px; font-weight:600; font-family:var(--display); text-transform:uppercase; letter-spacing:0.05em;}
+.chev{width:18px;height:18px;flex:none;color:var(--muted);transition:transform .3s cubic-bezier(0.4, 0, 0.2, 1)}
+.xp-btn[aria-expanded="true"] .chev{transform:rotate(180deg); color:var(--accent);}
+.xp-body{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .4s cubic-bezier(0.4, 0, 0.2, 1),visibility 0s .4s}
+.xp-item.open .xp-body{grid-template-rows:1fr;visibility:visible;transition:grid-template-rows .4s cubic-bezier(0.4, 0, 0.2, 1)}
+.xp-body > div{overflow:hidden}
+.xp-body ul{list-style:none;padding:0 40px 32px 108px}
+.xp-body li{position:relative;padding-left:20px;color:#a0a0a0;font-size:15px;max-width:70ch}
+.xp-body li+li{margin-top:12px}
+.xp-body li::before{content:"▹";position:absolute;left:0;top:-2px;color:var(--accent); font-size:18px;}
+
+/* tools */
+.tools{display:flex;flex-wrap:wrap;gap:12px}
+.tool-btn{display:inline-flex;align-items:center;height:46px;padding:0 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--text);font:500 14px var(--body);cursor:default;transition:all .3s}
+.tool-btn:hover{border-color:var(--accent);background:rgba(255,42,42,0.05); transform:translateY(-2px);}
+.tool-btn .tn{max-width:0;opacity:0;overflow:hidden;white-space:nowrap;margin-left:0;transition:all .3s ease}
+.tool-btn:hover .tn{max-width:150px;opacity:1;margin-left:12px;margin-right:6px}
+.ti{width:26px;height:26px;border-radius:3px;display:grid;place-items:center;font:800 12px/1 var(--body);letter-spacing:-.02em;border:1px solid;flex:none}
+
+/* contact */
+.socials{display:flex;flex-wrap:wrap;gap:16px}
+.sbtn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--text);font:600 15px var(--display); text-transform:uppercase; letter-spacing:0.05em; text-decoration:none;cursor:pointer;transition:all .3s}
+.sbtn:hover{border-color:var(--accent);background:var(--text); color:var(--bg);}
+.sbtn svg{width:18px;height:18px; flex:none}
+.sbtn:hover svg{color:var(--bg);}
+
+footer{padding:64px 40px; text-align:center;}
+footer .big{font:900 clamp(44px,8vw,80px)/.9 var(--display);text-transform:uppercase; background:linear-gradient(180deg, #fff, #555); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+footer .big span{background:var(--accent); -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 0 20px var(--accent-glow);}
+footer p{color:var(--muted);margin:24px auto;max-width:50ch; font-size:16px;}
+.cta{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 32px;background:var(--accent);color:#fff;font:800 16px var(--display); text-transform:uppercase; letter-spacing:0.05em; text-decoration:none;transition:all .3s; border-radius:2px;}
+.cta:hover{background:#fff; color:var(--bg); box-shadow:0 0 20px rgba(255,255,255,0.4);}
+.foot-row{margin-top:64px;padding-top:24px;border-top:1px solid var(--line-soft);display:flex;justify-content:center;gap:32px;font-size:13px;color:var(--muted); text-transform:uppercase; letter-spacing:0.05em;}
+
+@media (max-width:768px){
+  .grid{grid-template-columns:1fr}
+  .id{flex-direction:column;align-items:flex-start;gap:20px;margin-top:-60px}
+  .xp-btn{padding:20px; gap:16px;}
+  .xp-d{display:none}
+  .xp-body ul{padding:0 20px 24px 84px}
+  .pad, .sec, .sec-h, footer{padding-inline:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="mark" href="#top">عبد الحميد<i>.</i></a>
+    <nav aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="frame" id="top">
+  <div class="banner" aria-hidden="true">
+    <div class="glitch-bg"></div>
+  </div>
+
+  <section class="pad" style="padding-bottom:0">
+    <div class="id">
+      <div class="avatar">
+        <span>ع<i>ح</i></span>
+      </div>
+      <div>
+        <h1>عبد الحميد</h1>
+        <p class="role"><b>Senior Graphic Designer</b> & Visual Artist</p>
+      </div>
+    </div>
+    <div class="status"><span class="dot"></span>Open to club, federation, and freelance projects</div>
+  </section>
+
+  <div class="hatch"></div>
+
+  <section id="about">
+    <div class="sec-h"><h2>Directive</h2></div>
+    <div class="sec about">
+      <ul>
+        <li>Detail-oriented graphic designer with a strong foundation in <mark>sports branding</mark> and visual identity systems for elite clubs and organizations.</li>
+        <li>Specialized in advanced 3D workflows, encompassing <mark>character sculpting</mark> and <mark>environment design</mark> alongside robust traditional 2D vector and photo-manipulation skills.</li>
+        <li>Combining mecha/hard-surface aesthetics with high-impact sports design to build dynamic, future-forward branding campaigns.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="hatch"></div>
+
+  <section id="skills">
+    <div class="sec-h"><h2>Arsenal</h2></div>
+    <div class="sec">
+      <div class="group">
+        <h3>Disciplines</h3>
+        <div class="chips" id="craft"></div>
+      </div>
+      <div class="group">
+        <h3>Software</h3>
+        <div class="tools" id="tools"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hatch"></div>
+
+  <section id="work">
+    <div class="sec-h"><h2>Case Studies</h2></div>
+    <div class="sec">
+      <div class="tabs" id="tabs" role="group"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <div class="hatch"></div>
+
+  <section id="experience">
+    <div class="sec-h"><h2>Experience</h2></div>
+    <div id="xp"></div>
+  </section>
+
+  <div class="hatch"></div>
+
+  <section id="contact">
+    <div class="sec-h"><h2>Transmission</h2></div>
+    <div class="sec">
+      <div class="socials" id="links"></div>
+    </div>
+  </section>
+
+  <div class="hatch"></div>
+
+  <footer>
+    <div class="big">Branding built<br><span>for the future.</span></div>
+    <p>Crafting visual identities for sports federations, esports giants, and beyond.</p>
+    <a class="cta" href="#contact">Initiate Contact</a>
+    <div class="foot-row">
+      <span>&copy; <span id="yr"></span> عبد الحميد</span>
+    </div>
+  </footer>
+</main>
+
+<script>
+const NAME = "عبد الحميد";
+const CRAFT = ["Sports Branding", "3D Character Sculpting", "Environment Design", "Esports Identity", "Hard-Surface Modeling", "Photo Manipulation", "Typography"];
+const TOOLS = [
+  { name:"Photoshop",    ps:["Ps","#31A8FF","#001E36"] },
+  { name:"Illustrator",  ps:["Ai","#FF9A00","#330000"] },
+  { name:"ZBrush",       ps:["Zb","#999999","#1a1a1a"] },
+  { name:"Unreal Engine",ps:["UE","#FFFFFF","#050505"] },
+  { name:"Maya",         ps:["My","#06B6D4","#001a1f"] },
+  { name:"Blender",      ps:["Bl","#F97316","#261201"] },
+  { name:"Figma",        figma:true }
+];
+
+const EXPERIENCE = [
+  { company:"Prominent Sports Federation", role:"Senior Graphic Designer", period:"2026 - Present", logo:"",
+    points:["Lead art direction for club and federation rebranding campaigns.","Develop full visual identity systems and media-day player portraits."] },
+  { company:"Esports Org Concept", role:"Branding Designer", period:"2025 - 2026", logo:"",
+    points:["Designed conceptual branding and promotional campaigns for teams like Vitality and Leviatán.","Integrated 3D mecha hard-surface elements into competitive gaming aesthetics."] },
+  { company:"3D Environment Art", role:"Visual Artist", period:"2025 - Present", logo:"",
+    points:["Explored environment design workflows heavily utilizing Unreal Engine 5 and Maya.","Completed advanced pipeline structuring for 3D scenery."] }
+];
+
+const PROJECTS = [
+  { title:"Team Vitality Rebrand", client:"Esports", category:"Branding", year:"2026", image:"" },
+  { title:"Leviatán Campaign", client:"Esports", category:"Art Direction", year:"2026", image:"" },
+  { title:"Mecha Hard-Surface Concept", client:"Personal", category:"3D Art", year:"2026", image:"" },
+  { title:"UE5 Environment Scape", client:"Personal", category:"3D Environments", year:"2025", image:"" }
+];
+
+const SOCIALS = [
+  { type:"email", label:"Email", value:"hello@example.com" },
+  { type:"behance", label:"Behance", url:"#" },
+  { type:"linkedin", label:"LinkedIn", url:"#" }
+];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+$("#yr").textContent = new Date().getFullYear();
+
+const tick = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 13l4 4L19 7"/></svg>';
+$("#craft").innerHTML = CRAFT.map(s => `<span class="chip">${tick}${esc(s)}</span>`).join("");
+
+const figma = '<svg viewBox="0 0 38 57" style="width:16px;height:16px"><path fill="#1ABCFE" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0ACF83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#FF7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#F24E1E" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#A259FF" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg>';
+$("#tools").innerHTML = TOOLS.map(t => {
+  const icon = t.figma ? figma : `<span class="ti" style="color:${t.ps[1]};background:${t.ps[2]};border-color:${t.ps[1]}44">${esc(t.ps[0])}</span>`;
+  return `<button type="button" class="tool-btn" aria-label="${esc(t.name)}">${icon}<span class="tn">${esc(t.name)}</span></button>`;
+}).join("");
+
+const chev = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>';
+$("#xp").innerHTML = EXPERIENCE.map((x,i) => {
+  const logo = esc(x.company.trim().charAt(0).toUpperCase());
+  return `<div class="xp-item${i===0?" open":""}"><button type="button" class="xp-btn" aria-expanded="${i===0}"><span class="logo">${logo}</span><span class="xp-t"><b>${esc(x.company)}</b><span>${esc(x.role)}</span></span><span class="xp-d">${esc(x.period)}</span>${chev}</button><div class="xp-body"><div><ul>${x.points.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div></div></div>`;
+}).join("");
+$("#xp").addEventListener("click", e => {
+  const b = e.target.closest(".xp-btn"); if(!b) return;
+  const item = b.parentElement, open = !item.classList.contains("open");
+  item.classList.toggle("open", open); b.setAttribute("aria-expanded", open);
+});
+
+const cats = ["All", ...new Set(PROJECTS.map(p => p.category))];
+let active = "All";
+function renderWork(){
+  $("#tabs").innerHTML = cats.map(c => `<button class="tab" aria-pressed="${c===active}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+  const list = PROJECTS.map((p,i)=>({...p,i})).filter(p => active==="All" || p.category===active);
+  $("#grid").innerHTML = list.map(p => {
+    const art = `<span class="num" aria-hidden="true">${String(p.i+1).padStart(2,"0")}</span>`;
+    return `<div class="card"><div class="thumb">${art}</div><div class="meta"><h4>${esc(p.title)}</h4><p><span>${esc(p.category)}</span><span>${esc(p.year)}</span></p></div></div>`;
+  }).join("");
+}
+$("#tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if(!b) return; active = b.dataset.c; renderWork(); });
+renderWork();
+
+const IC = {
+  email:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>',
+  behance:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h6a4 4 0 0 1 0 8H2V7zm0 8h6.5a4 4 0 0 1 0 8H2v-8zm13-5h5m-5 5h5c0-3.5-3-5-6-5s-5 3.5-5 6 3 5 6 5c3.5 0 5-2.5 5-2.5"/></svg>',
+  linkedin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>'
+};
+$("#links").innerHTML = SOCIALS.map(x => `<a class="sbtn" href="${esc(x.url||'#')}">${IC[x.type]}${esc(x.label)}</a>`).join("");
+</script>
+</body>
+</html>
